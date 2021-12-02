@@ -26,22 +26,22 @@ public class Test2 {
   }
 
   
- @Test
-  public void testUadyFail() throws Exception {
-    driver.get("https://es.uadyvirtual.uady.mx/login/index.php");
-    driver.findElement(By.id("username")).click();
-    driver.findElement(By.id("username")).click();
-    driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("a15001281");
-    driver.findElement(By.id("password")).click();
-    driver.findElement(By.id("password")).clear();
-    driver.findElement(By.id("password")).sendKeys("dgfdddh");
-    driver.findElement(By.id("loginbtn")).click();
+@Test
+  public void testUadyPass() throws Exception {
+   driver.get("https://es.uadyvirtual.uady.mx/login/index.php");
+   driver.findElement(By.id("username")).click();
+   driver.findElement(By.id("username")).click();
+   driver.findElement(By.id("username")).clear();
+   driver.findElement(By.id("username")).sendKeys("A15001281");
+   driver.findElement(By.id("password")).click();
+   driver.findElement(By.id("password")).clear();
+   driver.findElement(By.id("password")).sendKeys("clarinet.33AÑOS");
+   driver.findElement(By.id("login")).submit();
     
     pause(10000);
     
-    String textoEjecucion= driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/section/div/div[2]/div/div/div/div/div[1]/div")).getText();
-    String textoEsperado="Datos erróneos. Por favor, inténtelo otra vez.";
+    String textoEjecucion= driver.findElement(By.xpath("/html/body/div[2]/footer/div/div[2]/div[1]/div[2]/a[1]")).getText();
+    String textoEsperado="ROMINA ASAHELI BURGOS CHALE";
     assertThat(textoEsperado,is(textoEjecucion));
   }
 
