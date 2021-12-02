@@ -25,21 +25,6 @@ public class Test2 {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  /*@Test
-  public void test2() throws Exception {
-    driver.get("https://www.google.com/");
-    driver.findElement(By.name("q")).click();
-    driver.findElement(By.name("q")).sendKeys(Keys.DOWN);
-    driver.findElement(By.name("q")).clear();
-    driver.findElement(By.name("q")).sendKeys("coronavirus");
-    driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-    driver.findElement(By.xpath("//div[@id='kp-wp-tab-overview']/div[3]/div/div[2]/div/div/div/div/div/div/div/div/a/h3")).click();
-    pause(10000);
-    
-    String textoEjecucion = driver.getTitle();
-    // ERROR: Caught exception [ERROR: Unsupported command [doubleClick | xpath=//div[@id='kp-wp-tab-overview']/div[3]/div/div[2]/div/div/div/div/div/div/div/div/a/h3 | ]]
-    assertEquals("Coronavirus – gob.mx", driver.getTitle());
-  }*/
   
  @Test
   public void testUadyFail() throws Exception {
@@ -59,25 +44,6 @@ public class Test2 {
     String textoEsperado="Datos erróneos. Por favor, inténtelo otra vez.";
     assertThat(textoEsperado,is(textoEjecucion));
   }
-
-  //@Test
- // public void testUadyPass() throws Exception {
-   //driver.get("https://es.uadyvirtual.uady.mx/login/index.php");
-   //driver.findElement(By.id("username")).click();
-   //driver.findElement(By.id("username")).click();
-   //driver.findElement(By.id("username")).clear();
-   //driver.findElement(By.id("username")).sendKeys("A15001281");
-    //driver.findElement(By.id("password")).click();
-    //driver.findElement(By.id("password")).clear();
-   //driver.findElement(By.id("password")).sendKeys("*********");
-    //driver.findElement(By.id("login")).submit();
-    
-    //pause(10000);
-    
-    //String textoEjecucion= driver.findElement(By.xpath("/html/body/div[2]/footer/div/div[2]/div[1]/div[2]/a[1]")).getText();
-   // String textoEsperado="ROMINA ASAHELI BURGOS CHALE";
-    //assertThat(textoEsperado,is(textoEjecucion));
-  //}
 
   @After
   public void tearDown() throws Exception {
