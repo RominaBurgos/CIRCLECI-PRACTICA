@@ -24,7 +24,7 @@ public class Test2 {
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
-
+	
   /*@Test
   public void test2() throws Exception {
     driver.get("https://www.google.com/");
