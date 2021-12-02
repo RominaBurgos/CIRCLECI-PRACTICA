@@ -27,16 +27,16 @@ public class Test2 {
 
   
 @Test
-  public void testUadyPass() throws Exception {
+   public void testUadyPass() throws Exception {
    driver.get("https://es.uadyvirtual.uady.mx/login/index.php");
    driver.findElement(By.id("username")).click();
    driver.findElement(By.id("username")).click();
    driver.findElement(By.id("username")).clear();
    driver.findElement(By.id("username")).sendKeys("A15001281");
-   driver.findElement(By.id("password")).click();
-   driver.findElement(By.id("password")).clear();
-   driver.findElement(By.id("password")).sendKeys("clarinet.33AÑOS");
-   driver.findElement(By.id("login")).submit();
+    driver.findElement(By.id("password")).click();
+    driver.findElement(By.id("password")).clear();
+   driver.findElement(By.id("password")).sendKeys("CLARINET33años");
+    driver.findElement(By.id("login")).submit();
     
     pause(10000);
     
@@ -44,6 +44,7 @@ public class Test2 {
     String textoEsperado="ROMINA ASAHELI BURGOS CHALE";
     assertThat(textoEsperado,is(textoEjecucion));
   }
+
 
   @After
   public void tearDown() throws Exception {
