@@ -25,7 +25,7 @@ public class Test2 {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test
+  /*@Test
   public void test2() throws Exception {
     driver.get("https://www.google.com/");
     driver.findElement(By.name("q")).click();
@@ -39,10 +39,10 @@ public class Test2 {
     String textoEjecucion = driver.getTitle();
     // ERROR: Caught exception [ERROR: Unsupported command [doubleClick | xpath=//div[@id='kp-wp-tab-overview']/div[3]/div/div[2]/div/div/div/div/div/div/div/div/a/h3 | ]]
     assertEquals("Coronavirus – gob.mx", driver.getTitle());
-  }
+  }*/
   
-// @Test
-  /*public void testUadyFail() throws Exception {
+ @Test
+  public void testUadyFail() throws Exception {
     driver.get("https://es.uadyvirtual.uady.mx/login/index.php");
     driver.findElement(By.id("username")).click();
     driver.findElement(By.id("username")).click();
@@ -58,7 +58,7 @@ public class Test2 {
     String textoEjecucion= driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/section/div/div[2]/div/div/div/div/div[1]/div")).getText();
     String textoEsperado="Datos erróneos. Por favor, inténtelo otra vez.";
     assertThat(textoEsperado,is(textoEjecucion));
-  }*/
+  }
 
   //@Test
  // public void testUadyPass() throws Exception {
