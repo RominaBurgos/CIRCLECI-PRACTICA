@@ -69,7 +69,7 @@ public class Test2 {
    driver.findElement(By.id("username")).sendKeys("A15001281");
     driver.findElement(By.id("password")).click();
     driver.findElement(By.id("password")).clear();
-   driver.findElement(By.id("password")).sendKeys("CLARINET33años");
+   driver.findElement(By.id("password")).sendKeys("*******");
     driver.findElement(By.id("login")).submit();
     
     pause(10000);
